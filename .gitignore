@@ -1,0 +1,57 @@
+﻿# .NET Core build artifacts
+bin/
+obj/
+
+# Publish output
+out/
+
+# Logs
+*.log
+*.tlog
+*.vspscc
+
+# Visual Studio specific
+.vs/
+.vscode/
+*.user
+*.suo
+
+# Rider
+.idea/
+*.sln.iml
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# Windows-specific files
+Thumbs.db
+ehthumbs.db
+
+# macOS-specific files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Linux-specific files
+*~
+
+# Rider settings
+.idea/
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/usage.statistics.xml
+.idea/**/shelf/
+.idea/**/workspace.xml
+
+# User-specific files
+*.rsuser
+*.sln.ide
+*.sln.docstates
+
+# Microsoft User-specific files
+.vscode/
+.vs/
+*.sln.docstates
+
+# End of list
+/Demo.DotnetCoreOnionArchDapper/Demo.API/Demo.API.csproj.user
