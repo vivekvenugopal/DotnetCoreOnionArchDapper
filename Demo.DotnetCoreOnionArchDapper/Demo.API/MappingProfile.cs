@@ -7,7 +7,7 @@ namespace Demo.API
     {
         public MappingProfile()
         {
-            CreateMap<Product, ProductDTO>(); // Define map for individual objects
+            CreateMap<Product, ProductDTO>().ReverseMap();
         }
     }
 }
