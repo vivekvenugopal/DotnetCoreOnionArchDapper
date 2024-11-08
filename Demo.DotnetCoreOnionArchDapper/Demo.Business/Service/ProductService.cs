@@ -2,6 +2,7 @@
 using Demo.Definitions.DataAccess;
 using Demo.Definitions.Service;
 using Demo.DTO;
+using Demo.Common;
 
 namespace Demo.Business.Service
 {
@@ -18,16 +19,20 @@ namespace Demo.Business.Service
             _mapper = mapper;
         }
 
-        public IEnumerable<Product> GetAllAsync() 
+        public async Task<IEnumerable<Product>> GetAllAsync() 
         {
-            return _mapper.Map<IEnumerable<Product>>(_productRepository.GetAllAsync());
+            var products = await  _productRepository.GetAllAsync();
+
+            return _mapper.Map<IEnumerable<Product>>(products);
         }
 
-        public Product GetByIdAsync(int id) {
-            
-           return _mapper.Map<Product>(_productRepository.GetByIdAsync(id)); 
-        
+        public async Task<Product> GetByIdAsync(int id)
+        {
+            var product = await _productRepository.GetByIdAsync(id);
+
+            return _mapper.Map<Product>(product);
         }
+
 
         public Task AddAsync(Product product)
         {

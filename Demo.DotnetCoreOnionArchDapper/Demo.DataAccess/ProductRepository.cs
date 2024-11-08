@@ -22,7 +22,7 @@ namespace Demo.DataAccess
 
         public async Task<ProductDTO> GetByIdAsync(int id)
         { 
-            return await _connection.QueryFirstOrDefaultAsync<ProductDTO>("SELECT * FROM Products WHERE Id = @Id", new { Id = id });
+            return await _connection.QueryFirstOrDefaultAsync<ProductDTO>("SELECT * FROM Products WHERE product_id = @Id", new { Id = id });
         }
 
         public async Task AddAsync(ProductDTO product)
@@ -34,7 +34,7 @@ namespace Demo.DataAccess
 
         public async Task UpdateAsync(ProductDTO product)
         { 
-            var sql = "UPDATE Products SET Name = @Name, Price = @Price WHERE Id = @Id";
+            var sql = "UPDATE Products SET Name = @Name, Price = @Price WHERE product_id = @Id";
 
             await _connection.ExecuteAsync(sql, product);
         }

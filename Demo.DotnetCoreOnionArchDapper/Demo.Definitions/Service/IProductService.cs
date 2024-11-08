@@ -4,9 +4,9 @@ namespace Demo.Definitions.Service
 {
     public interface IProductService
     {
-        IEnumerable<Product> GetAllAsync();
+        Task<IEnumerable<Product>> GetAllAsync();
 
-        Product GetByIdAsync(int id);
+        Task<Product> GetByIdAsync(int id);
 
         Task AddAsync(Product product);
 

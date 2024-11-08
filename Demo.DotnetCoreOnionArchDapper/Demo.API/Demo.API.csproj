@@ -9,6 +9,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Dockerfile" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="AutoMapper" Version="13.0.1" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.21.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.9.0" />
@@ -19,6 +23,10 @@
     <ProjectReference Include="..\Demo.DataAccess\Demo.DataAccess.csproj" />
     <ProjectReference Include="..\Demo.Definitions\Demo.Definitions.csproj" />
     <ProjectReference Include="..\Demo.Model\Demo.Model.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="..\.dockerignore" />
   </ItemGroup>
 
 </Project>
